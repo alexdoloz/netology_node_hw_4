@@ -4,7 +4,7 @@ const translateText = require('./translate');
 const Mustache = require('mustache');
 const querystring = require('querystring');
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const translateHTML = fs.readFileSync('translate.html', 'utf8');
 
 function htmlWithTranslationResult(result) {
